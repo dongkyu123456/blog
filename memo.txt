@@ -1,0 +1,30 @@
+타임리프를 활성화(어플리케이션 프로퍼티스,폼xml)시켰더니 웹사이트 전체실행되지 않음
+미해결
+a1,a2png 참조
+
+
+엔티티, 아이디등 어노테이션이 동작하지 않음
+폼xml에서 jpa 주석 풀어서 해결
+
+
+롤타입, 유저, 더미콘트롤러 테스츠
+user.setRole(RoleType.USER)가 작동하지 않음
+이넘타입 스트링의 주석과 user.setRole(RoleType.USER)의 주석을 풀면 정상작동이 되어야함
+
+
+-- 보드 데이터 3개 추가
+-- INSERT INTO blog.board (title, content, count, user_id, create_date)
+-- VALUES ('안녕하세요', '하이.', 0, 1, now()),
+-- ('반갑습니다', 'ㅎㅇㅎㅇ.', 0, 2, now()),
+-- ('ㅎㅇ루', 'ㅎㅇ루.', 0, 3, now());
+
+-- 유저 데이터 3개 추가
+INSERT INTO user (username, password, email, role, create_date) VALUES
+('kim', '1', 'john@gmail.com', 'USER', now()),
+('park', '1', 'jane@gmail.com', 'USER', now()),
+('lee', '1', 'hong@gmail.com', 'USER', now());
+
+-- INSERT INTO reply(content, boardId, userId, createDate) VALUES
+-- ("첫 번째 댓글입니다.", 1, 1, now()),
+-- ("두 번째 댓글입니다.", 1, 2, now()),
+-- ("세 번째 댓글입니다.", 2, 1, now());
