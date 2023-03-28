@@ -24,7 +24,7 @@
 		</dependency>
 
 		<!-- 타임 리프 -->
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
@@ -32,7 +32,7 @@
 			<groupId>org.thymeleaf.extras</groupId>
 			<artifactId>thymeleaf-extras-java8time</artifactId>
 			<version>3.0.4.RELEASE</version>
-		</dependency> -->
+		</dependency>
 		
 		<!-- 시큐리티 태그 라이브러리 -->
 	<!-- <dependency>

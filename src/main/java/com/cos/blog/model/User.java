@@ -7,8 +7,8 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
+// import jakarta.persistence.EnumType;
+// import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -30,7 +30,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)//프로젝트에서 연결된 DB의 넘버링 전략을 따라감
     private int id;//시퀸스, 오토 인크리먼트
 
-    @Column(nullable = false, length = 30)
+    @Column(nullable = false, length = 30,unique = true)
     private String username; // 아이디
 
     @Column(nullable = false, length = 100)//1234 해시 변경후 암호화를 위해 길이를 넉넉하게

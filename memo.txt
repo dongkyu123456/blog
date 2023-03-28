@@ -14,6 +14,8 @@ user.setRole(RoleType.USER)가 작동하지 않음
 더미콘트롤러 테스트
 Yarc로 실행시에 put이 되지 않음(업데이트 문제)
 
+html에서 html로 인클루드?
+
 
 -- 보드 데이터 3개 추가
 -- INSERT INTO blog.board (title, content, count, user_id, create_date)
