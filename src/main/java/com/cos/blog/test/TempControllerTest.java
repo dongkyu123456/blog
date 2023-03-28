@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller // file을 리턴
 public class TempControllerTest {
 
-    // localhost8088/blog/temp/home
+    //http://localhost8088/blog/temp/home
     @GetMapping("/temp/home")
     public String tempHome() {
         System.out.println("/temp/home");

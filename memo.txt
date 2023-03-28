@@ -7,9 +7,12 @@ a1,a2png 참조
 폼xml에서 jpa 주석 풀어서 해결
 
 
-롤타입, 유저, 더미콘트롤러 테스츠
+롤타입, 유저, 더미콘트롤러 테스트
 user.setRole(RoleType.USER)가 작동하지 않음
 이넘타입 스트링의 주석과 user.setRole(RoleType.USER)의 주석을 풀면 정상작동이 되어야함
+
+더미콘트롤러 테스트
+Yarc로 실행시에 put이 되지 않음(업데이트 문제)
 
 
 -- 보드 데이터 3개 추가
