@@ -1,12 +1,12 @@
 <!-- <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> -->
+
 <body>
-<header id="header"></header>
-</script>
+  <header id="header"></header>
+  </script>
   <div class="container">
     <div class="card m-2">
       <div class="card-body">
         <h4 class="card-title">제목</h4>
-        <p class="card-text">내용</p>
         <a href="#" class="btn btn-primary">상세보기</a>
       </div>
     </div>
@@ -17,7 +17,6 @@
     <div class="card m-2">
       <div class="card-body">
         <h4 class="card-title">제목</h4>
-        <p class="card-text">내용</p>
         <a href="#" class="btn btn-primary">상세보기</a>
       </div>
     </div>
@@ -26,29 +25,30 @@
     <div class="card m-2">
       <div class="card-body">
         <h4 class="card-title">제목</h4>
-        <p class="card-text">내용</p>
         <a href="#" class="btn btn-primary">상세보기</a>
       </div>
     </div>
   </div>
+
+  <!-- <header id="header"></header> -->
   <footer id="footer"></footer>
   <script>
-  fetch("./layout/header")
-  .then(response => {
-  return response.text()
-  })
+    fetch("./layout/header")
+      .then(response => {
+        return response.text()
+      })
 
-  .then(data => {
-  document.querySelector("header").innerHTML = data;
-  });
+      .then(data => {
+        document.querySelector("header").innerHTML = data;
+      });
 
-  fetch("./layout/footer")
-  .then(response => {
-  return response.text()
-  })
-  .then(data => {
-  document.querySelector("footer").innerHTML = data;
-  });
+    fetch("./layout/footer")
+      .then(response => {
+        return response.text()
+      })
+      .then(data => {
+        document.querySelector("footer").innerHTML = data;
+      });
 
-</script>
+  </script>
 </body>

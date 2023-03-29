@@ -9,6 +9,7 @@ public class BoardController {
     public String index(){
         return "index";
     }
+
     @GetMapping({"/layout/header"})
     public String header(){
         return "layout/header";
