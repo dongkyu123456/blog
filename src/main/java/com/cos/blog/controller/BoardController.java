@@ -7,7 +7,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class BoardController {
     @GetMapping({"","/"})
     public String index(){
-        // /WEB-INF/views/index
         return "index";
+    }
+    @GetMapping({"/layout/header"})
+    public String header(){
+        return "layout/header";
+    }
+    @GetMapping({"/layout/footer"})
+    public String footer(){
+        return "layout/footer";
     }
 }

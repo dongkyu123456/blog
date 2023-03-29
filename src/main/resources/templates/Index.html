@@ -1,14 +1,7 @@
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript">
-  $(document).ready(function () {
-
-    $("#headers").load("layout/header.html");  // 원하는 파일 경로를 삽입하면 된다
-    $("#footers").load("layout/footer.html");  // 원하는 파일 경로를 삽입하면 된다
-  });
-</script>
-
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> -->
 <body>
-  <div id="headers"></div>
+<header id="header"></header>
+</script>
   <div class="container">
     <div class="card m-2">
       <div class="card-body">
@@ -29,8 +22,6 @@
       </div>
     </div>
   </div>
-
-
   <div class="container">
     <div class="card m-2">
       <div class="card-body">
@@ -40,5 +31,24 @@
       </div>
     </div>
   </div>
-  <div id="footers"></div>
+  <footer id="footer"></footer>
+  <script>
+  fetch("./layout/header")
+  .then(response => {
+  return response.text()
+  })
+
+  .then(data => {
+  document.querySelector("header").innerHTML = data;
+  });
+
+  fetch("./layout/footer")
+  .then(response => {
+  return response.text()
+  })
+  .then(data => {
+  document.querySelector("footer").innerHTML = data;
+  });
+
+</script>
 </body>
