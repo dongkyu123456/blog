@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-// import org.springframework.web.bind.annotation.RequestParam;
 
 // 사용자가 요청 -> 응답(HTML을 응답)을 원하면 일반 콘트롤러 어노테이션을 사용한다
 // 사용자가 요청 -> 응답(Data를 응답)
@@ -14,25 +13,22 @@ import org.springframework.web.bind.annotation.RestController;
     //rest
 @RestController
 public class HttpControllerTests {
-    //http://localhost:8088/blog/http/get
+    //http://localhost:8088/http/get
     //(select)
     //브라우저에서는 겟요청만 할 수 있다
     //GET 요청에서는 요청할 데이터를 전달할 방법이 쿼리스트링 밖에 없다
-    @GetMapping("/http/get")
+    @GetMapping("/makeblog/http/get")
+    // public String getTest(@RequestParam int id. @RequestParam String username){ //요청한 id값과 username을 받아볼 수 있음
+    // public String getTest(member m){ // 
     public String getTest(){
-    return "get요청";
+        return "get요청";
+        // return "get요청 : "+ id +"," + username;
+        // return "get요청 : "+ m.getId() +"," + m.getUsername();  메서드로 생성 주의!!
     }
-    // public String getTest(@RequestParam int id, @RequestParam String username){ //요청한 id값과 username을 받아볼 수 있음
-    // return "get요청 : "+ id +"," + username;
-    // }
-    
-    // public String getTest(Member m){
-    // return "get요청 : "+ m.getId() +"," + m.getUsername(); // 메서드로 생성 주의!!
-    // }
 
-    //http://localhost:8088/blog/http/post
+    //http://localhost:8088/http/post
     //(insert)
-    @PostMapping("blog/http/post")
+    @PostMapping("/makeblog/http/post")
     // public String postTest(){
     //     return "post요청";
     // }
@@ -48,13 +44,13 @@ public class HttpControllerTests {
     }
 
 
-    //http://localhost:8088/blog/http/put(update)
-    @PutMapping("/blog/http/put")
+    //http://localhost:8088/http/put(update)
+    @PutMapping("/makeblog/http/put")
     public String putTest(@RequestBody Member m){
         return "put요청 : "+ m.getId() +"," + m.getUsername();
     }
-    //http://localhost:8088/makeblog/http/delete(delete)
-    @DeleteMapping("/blog/http/delete")
+    //http://localhost:8088/http/delete(delete)
+    @DeleteMapping("/makeblog/http/delete")
     public String deleteTest(){
         return "delete요청";
     }

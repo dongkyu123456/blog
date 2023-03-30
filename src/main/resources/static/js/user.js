@@ -2,21 +2,24 @@ let index = {
     init: function () {
         $("#btn-save").on("click", () => {
             this.save()
-            // console.log("click log");
+            console.log("click log");
         });
         // 누군가가 btnsave에서 on.event를 발동할 경우 함수를 실행함
     },
 
     save: function () {
-        // console.log("save log");
         let data ={
             username:$("#username").val(),
             password:$("#password").val(),
             email:$("#email").val(),
         }
-        // console.log(data);
+        console.log(data);
 
-        $.ajax().done().fail(); // 에이잭스 통신을 이용해서 3개의 데이터를 json 변경후 insert 요청
+        $.
+        ajax().
+        done().
+        fail(); 
+        // 에이잭스 통신을 이용해서 3개의 데이터를 json 변경후 insert 요청
 
     }
 }
